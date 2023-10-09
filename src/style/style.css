@@ -1,0 +1,30 @@
+.box{
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-image: url("https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg");
+}
+.box .inputData{
+    margin-top: 14px;   
+}
+.box .inputData input{
+    width: 200px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+@media screen and (max-width: 992px) {
+    .box .inputData input{
+        width: 150px;
+        height: 42px;
+        border-radius: 5px;
+    }
+  }
+  

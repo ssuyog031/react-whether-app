@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-
+import '../style/style.css';
 const TempComponent = () => {
   const [city, setCity] = useState(null);
-  const [search, SetSearch] = useState("pune");
+  const [search, SetSearch] = useState("Pune");
   useEffect(() => {
     const fetchApi = async () => {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=ec341eea937e278e38d2c1c86ad55795`;
@@ -18,6 +18,7 @@ const TempComponent = () => {
       <div className="inputData">
         <input
           type="search"
+          placeholder="Enter a City"
           onChange={(event) => {
             SetSearch(event.target.value);
           }}
@@ -31,9 +32,11 @@ const TempComponent = () => {
           {/* {console.log(city,"city1")} */}
           <h2>Temperature : {city?.main?.temp} °C</h2>
           <h2>Country : {city.sys?.country}</h2>
-          <h2>
-            Max temp : {city?.main?.temp_min} °C | Min temp :{city?.main?.temp_max}°C{" "}
-          </h2>
+
+          <h3>
+            Min temp : {city?.main?.temp_min} °C | Max temp :{city?.main?.temp_max}°C{" "}
+          </h3>
+          <h3>humidity :{city?.main?.humidity}</h3>
         </div>
       )}
     </div>
